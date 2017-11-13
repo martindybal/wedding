@@ -27,10 +27,10 @@
     }
 
     function g() {
-        a(".img-as-bg").each(function (b, c) {
-            var d = a(c);
-            d.parent().css("background-image", 'url("' + d.attr("src") + '")'), d.remove()
-        })
+        // a(".img-as-bg").each(function (b, c) {
+        //     var d = a(c);
+        //     d.parent().css("background-image", 'url("' + d.attr("src") + '")'), d.remove()
+        // })
     }
 
     function h() {
@@ -142,12 +142,13 @@
         var b = a(".separator-carousel .owl-carousel");
         b.imagesLoaded(function () {
             b.owlCarousel({
-                loop: !0,
+                loop: true,
                 margin: 0,
-                nav: !0,
+                nav: true,
                 items: 4,
-                autoHeight: !0,
-                dots: !1,
+                autoHeight: false,
+                autoWidth:true,
+                dots: false,
                 autoplay: !0,
                 autoplayTimeout: 5e3,
                 responsive: {
@@ -160,12 +161,6 @@
                     992: {
                         items: 4
                     }
-                }
-            }), b.magnificPopup({
-                delegate: "a",
-                type: "image",
-                gallery: {
-                    enabled: !0
                 }
             })
         })
