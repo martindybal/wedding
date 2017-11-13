@@ -936,8 +936,7 @@ section {
             }
 
             section.section-couple .bride-and-groom > .groom {
-                text-align: left;
-                
+                text-align: left;                
             }
 
                 section.section-couple .bride-and-groom > .bride .profile-pic, 
@@ -1759,10 +1758,19 @@ section {
 
         section.section-gallery .gallery-grid > .gallery-grid-item {
             width: 33.33%;
-            padding: 1rem;
+            padding: 0.5rem;
             overflow: hidden;
             position: relative
         }
+
+        section.section-gallery .gallery-grid > .gallery-grid-item.large{
+            width: 100%;
+            max-height: 60vh;            
+        }
+
+            section.section-gallery .gallery-grid > .gallery-grid-item figure{
+                display: none;
+            }
 
             section.section-gallery .gallery-grid > .gallery-grid-item img.gallery-video-icon {
                 width: 72px;
@@ -2143,6 +2151,16 @@ section {
         padding-right: 4rem
     }
 
+        section.section-couple .bride-and-groom > .bride,
+        section.section-couple .bride-and-groom > .groom {
+            text-align: center;                
+        }
+        
+        section.section-couple .bride-and-groom > .bride p,
+        section.section-couple .bride-and-groom > .groom p {
+            margin: 0 auto;
+        }
+        
         section.section-couple .bride-and-groom:before {
             top: 50%;
             margin-top: 0
