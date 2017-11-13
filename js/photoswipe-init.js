@@ -287,7 +287,6 @@
                 }
             };
             
-            initPhotoSwipeFromDOM('.gallery-carousel');
             initPhotoSwipeFromDOM('.gallery');
     
         })();

@@ -1751,7 +1751,7 @@ section {
                 section.section-gallery header ul.gallery-cats > li > a {
                     display: block;
                     padding: .5em 0
-                }
+                }*/
 
     section.section-gallery .gallery-grid {
         margin: -1rem
@@ -1810,7 +1810,7 @@ section {
 
             section.section-gallery .gallery-grid > .gallery-grid-item .gallery-hidden {
                 display: none
-            } */
+            } 
 
     section.section-gifts .retailer-list .row + .row {
         margin-top: 2em
