@@ -27,10 +27,10 @@
     }
 
     function g() {
-        // a(".img-as-bg").each(function (b, c) {
-        //     var d = a(c);
-        //     d.parent().css("background-image", 'url("' + d.attr("src") + '")'), d.remove()
-        // })
+        a(".img-as-bg").each(function (b, c) {
+            var d = a(c);
+            d.parent().css("background-image", 'url("' + d.attr("src") + '")'), d.remove()
+        })
     }
 
     function h() {
