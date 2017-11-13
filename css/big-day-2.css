@@ -869,7 +869,7 @@ section {
 
     section.section-couple {
         margin-top: 0;
-        padding-top: 8rem
+        padding-top: 2rem
     }
 
         section.section-couple .flowers {
@@ -926,20 +926,30 @@ section {
                 visibility: visible
             } */
 
-            section.section-couple .bride-and-groom > .bride, section.section-couple .bride-and-groom > .groom {
+            section.section-couple .bride-and-groom > .bride, 
+            section.section-couple .bride-and-groom > .groom {
                 width: 50%;
-                text-align: center
             }
 
-                section.section-couple .bride-and-groom > .bride .profile-pic, section.section-couple .bride-and-groom > .groom .profile-pic {
-                    width: 80%;
-                    margin: 0 auto;
-                    margin-bottom: 1em;
+            section.section-couple .bride-and-groom > .bride {
+                text-align: right;
+            }
+
+            section.section-couple .bride-and-groom > .groom {
+                text-align: left;
+                
+            }
+
+                section.section-couple .bride-and-groom > .bride .profile-pic, 
+                section.section-couple .bride-and-groom > .groom .profile-pic {
+                    width: 95%;
+                    margin: 25px;
                     overflow: hidden;
                     position: relative
                 }
 
-                    section.section-couple .bride-and-groom > .bride .profile-pic:after, section.section-couple .bride-and-groom > .groom .profile-pic:after {
+                    section.section-couple .bride-and-groom > .bride .profile-pic:after, 
+                    section.section-couple .bride-and-groom > .groom .profile-pic:after {
                         position: absolute;
                         content: '';
                         display: block;
@@ -951,34 +961,67 @@ section {
                         visibility: visible
                     }
 
-                section.section-couple .bride-and-groom > .bride h3, section.section-couple .bride-and-groom > .groom h3 {
+                section.section-couple .bride-and-groom > .bride h3, 
+                section.section-couple .bride-and-groom > .groom h3 {
                     font-size: 1.55em;
                     margin: 0;
                     line-height: 1.25
                 }
+                
+                section.section-couple .bride-and-groom > .bride h3 {
+                    margin: 0 15px 0 auto;
+                }
+                
+                section.section-couple .bride-and-groom > .groom h3 {
+                    margin: 0 auto 0 25px;
+                }
 
-                section.section-couple .bride-and-groom > .bride h4, section.section-couple .bride-and-groom > .groom h4 {
+                section.section-couple .bride-and-groom > .bride h4, 
+                section.section-couple .bride-and-groom > .groom h4 {
                     font-size: 1.25em;
                     font-weight: 400;
                     margin: 0;
-                    margin-bottom: 1em
+                    margin-bottom: 25px
                 }
-
-                section.section-couple .bride-and-groom > .bride p, section.section-couple .bride-and-groom > .groom p {
+                
+                section.section-couple .bride-and-groom > .bride h4 {
+                    margin: 0 15px 0 auto;
+                }
+                
+                section.section-couple .bride-and-groom > .groom h4 {
+                    margin: 0 auto 0 25px;
+                }
+                
+                section.section-couple .bride-and-groom > .bride p, 
+                section.section-couple .bride-and-groom > .groom p {
                     color: #9B9B9B;
                     max-width: 20em;
-                    margin: 0 auto
                 }
 
-                section.section-couple .bride-and-groom > .bride ul.social, section.section-couple .bride-and-groom > .groom ul.social {
+                section.section-couple .bride-and-groom > .bride p {
+                    margin: 0 15px 0 auto;
+                }
+                
+                section.section-couple .bride-and-groom > .groom p {
+                    margin: 0 auto 0 25px;
+                }
+
+                section.section-couple .bride-and-groom > .bride ul.social, 
+                section.section-couple .bride-and-groom > .groom ul.social {
                     margin-top: 1em
                 }
 
-                    section.section-couple .bride-and-groom > .bride ul.social a:link, section.section-couple .bride-and-groom > .bride ul.social a:visited, section.section-couple .bride-and-groom > .groom ul.social a:link, section.section-couple .bride-and-groom > .groom ul.social a:visited {
+                    section.section-couple .bride-and-groom > .bride ul.social a:link, 
+                    section.section-couple .bride-and-groom > .bride ul.social a:visited, 
+                    section.section-couple .bride-and-groom > .groom ul.social a:link, 
+                    section.section-couple .bride-and-groom > .groom ul.social a:visited {
                         color: #9B9B9B
                     }
 
-                    section.section-couple .bride-and-groom > .bride ul.social a:active, section.section-couple .bride-and-groom > .bride ul.social a:hover, section.section-couple .bride-and-groom > .groom ul.social a:active, section.section-couple .bride-and-groom > .groom ul.social a:hover {
+                    section.section-couple .bride-and-groom > .bride ul.social a:active, 
+                    section.section-couple .bride-and-groom > .bride ul.social a:hover, 
+                    section.section-couple .bride-and-groom > .groom ul.social a:active, 
+                    section.section-couple .bride-and-groom > .groom ul.social a:hover {
                         color: #E86C6C
                     }
 
