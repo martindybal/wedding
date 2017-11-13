@@ -496,10 +496,10 @@ body > footer {
         left: 0;
         width: 100%;
         height: 100%;
-        -webkit-filter: contrast(60%);
-        -moz-filter: contrast(60%);
-        -ms-filter: contrast(60%);
-        filter: contrast(60%);
+        -webkit-filter: contrast(75%);
+        -moz-filter: contrast(75%);
+        -ms-filter: contrast(75%);
+        filter: contrast(75%);
         background-position: center center;
         background-size: cover;
         z-index: 1
@@ -679,10 +679,10 @@ section {
             }
             
             section.section-hero .owl-carousel .item.contrast-low {
-                -webkit-filter: contrast(60%);
-                -moz-filter: contrast(60%);
-                -ms-filter: contrast(60%);
-                filter: contrast(60%)
+                -webkit-filter: opacity(80%);
+                -moz-filter: opacity(80%);
+                -ms-filter: opacity(80%);
+                filter: opacity(80%);
             }
 
             section.section-hero .owl-carousel .item.contrast {
@@ -1171,7 +1171,8 @@ section {
             }
 
         .counter {
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;                    
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    
+            background-attachment: fixed;          
         }
             .counter .decor{
                 margin: 0!important;

@@ -1,9 +1,23 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
-
 ! function (a) {
     "use strict";
+
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
+    $(window).on('DOMMouseScroll mousewheel', function (event) {
+        if ($(window).scrollTop() < 100) {
+            //scroll down
+            if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+
+                scrollToElement('#couple');
+                event.preventDefault();
+
+                //prevent page fom scrolling
+                return false;
+            }
+        }
+    });
 
     function f() {
         c.data("waypoint").context.refresh(), e.each(function (b, c) {
@@ -44,16 +58,20 @@ window.onbeforeunload = function () {
     function k() {
         a(".scroll-link").on("click", function (d) {
             d.preventDefault();
-            var e = a(this),
-                f = e.attr("href"),
-                g = (b.hasClass("admin-bar") ? 32 : 0) + (b.hasClass("nav-vertical") ? 0 : 48);
-            0 !== f.indexOf("#") || b.hasClass("scrolling") || b.addClass("scrolling").add("html").animate({
-                scrollTop: a(f).offset().top - g + 1
-            }, 400, function () {
-                b.removeClass("scrolling"), e.parents("nav").length > 0 && c.removeClass("opened").find(".menu-wrapper").animate({
-                    scrollTop: 0
-                }, 400)
-            })
+            var e = a(this);
+            var f = e.attr("href");
+            scrollToElement(f);
+        })
+    }
+
+    function scrollToElement(elementSelector) {
+        var g = (b.hasClass("admin-bar") ? 32 : 0) + (b.hasClass("nav-vertical") ? 0 : 48);
+        0 !== elementSelector.indexOf("#") || b.hasClass("scrolling") || b.addClass("scrolling").add("html").animate({
+            scrollTop: a(elementSelector).offset().top - g + 1
+        }, 400, function () {
+            b.removeClass("scrolling"), e.parents("nav").length > 0 && c.removeClass("opened").find(".menu-wrapper").animate({
+                scrollTop: 0
+            }, 400)
         })
     }
 
@@ -272,7 +290,7 @@ window.onbeforeunload = function () {
         }).on("finish.countdown", function (a) {
             c.html(c.data("after-countdown"));
             // b.html(b.data("after-countdown"));
-            b.parent().children().filter('[data-after-countdown]').each(function(i, e){
+            b.parent().children().filter('[data-after-countdown]').each(function (i, e) {
                 var $e = $(e);
                 $e.html($e.data("after-countdown"));
             })
