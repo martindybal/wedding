@@ -19,6 +19,8 @@
         }
     });
 
+    $("img.lazy").unveil(400);
+
     function f() {
         c.data("waypoint").context.refresh(), e.each(function (b, c) {
             var d = a(c);
@@ -143,6 +145,15 @@
     }
 
     function o() {
+        var html = ' <div class="owl-carousel owl-theme">' +
+            '<div class="item"> <img src="img/photos/carousel_1E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_2E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_3E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_4E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_5E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_6E.jpg" alt=""> </div>' +
+            '</div>';
+        $('.separator-carousel').html(html);
         var b = a(".separator-carousel .owl-carousel");
         b.imagesLoaded(function () {
             b.owlCarousel({
@@ -154,7 +165,6 @@
                 autoWidth: true,
                 dots: false,
                 autoplay: !0,
-                //lazyLoad: true,
                 autoplayTimeout: 5e3,
                 responsive: {
                     0: {
