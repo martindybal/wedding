@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 .display-flex {
     display: -webkit-flex;
@@ -676,6 +676,8 @@ section {
 
             section.section-hero .owl-carousel .item {
                 position: relative;
+                width: 100vw;
+                height: 100vh;
             }
             
             section.section-hero .owl-carousel .item.contrast-low {

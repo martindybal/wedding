@@ -125,7 +125,11 @@
                 autoplayTimeout: 5e3,
                 autoplayHoverPause: !1,
                 smartSpeed: 1e3,
+                lazyLoad: true,
                 animateOut: "fadeOut"
+            }).on('loaded.owl.lazy', function(event) {
+                $(event.element).addClass('img-as-bg');
+                g();
             }), setTimeout(function () {
                 window.requestAnimationFrame(m), setTimeout(function () {
                     a(".section-hero .cta").animateCss("fadeInUp")
@@ -147,9 +151,10 @@
                 nav: true,
                 items: 4,
                 autoHeight: false,
-                autoWidth:true,
+                autoWidth: true,
                 dots: false,
                 autoplay: !0,
+                //lazyLoad: true,
                 autoplayTimeout: 5e3,
                 responsive: {
                     0: {
