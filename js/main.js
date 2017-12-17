@@ -185,12 +185,12 @@
 
     function o() {
         var html = ' <div class="owl-carousel owl-theme">' +
-            '<div class="item"> <img src="img/photos/carousel_1E.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_2E.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_3E.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_4E.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_5E.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_6E.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_1.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_2.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_3.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_4.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_5.jpg" alt=""> </div>' +
+            '<div class="item"> <img src="img/photos/carousel_6.jpg" alt=""> </div>' +
             '</div>';
         $('.separator-carousel').html(html);
         var b = a(".separator-carousel .owl-carousel");
