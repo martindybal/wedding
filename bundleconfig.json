@@ -2,7 +2,7 @@
   {
     "outputFileName": "output/index.html",
     "inputFiles": [
-      "site.html"
+      "index.html"
     ],
     "minify": {
       "enabled": true,
