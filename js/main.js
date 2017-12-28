@@ -1,11 +1,35 @@
 ﻿! function (a) {
     "use strict";
 
-    var enableScroll = false;
-
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     };
+
+    var homeCarouselMove = function () {
+        var activeItem = $('.home-carousel').find('.item.active');
+        var nextItem = activeItem.next();
+        if (nextItem.length) {
+            nextItem.addClass('active');
+            activeItem.animate({ height: '0' },
+                1000,
+                function () {
+                    activeItem.removeClass('active').removeAttr('style');
+                });
+        } else {
+            nextItem = $('.home-carousel .item').first();
+            nextItem.css('height', 0).addClass('active').animate({ height: '100vh' },
+                1000,
+                function () {
+                    nextItem.removeAttr('style');
+                    activeItem.removeClass('active');
+                });
+
+        }
+    }
+
+    var startHomeCarousel = function () {
+        setInterval(homeCarouselMove, 5000);
+    }
 
     $(function () {
         setTimeout(function () {
@@ -13,52 +37,31 @@
             var $h2 = $('.announcement-wrapper h2');
 
             $h2.fadeOut(1000, function () {
-                $h2.text('Budeme se brát!').fadeIn(500,
-                    function () {
-                        setTimeout(function () {
-                            $h1.show().animate({ height: "60px" }, 500, function () {
-                                $('.scroll-down').fadeIn(function () {
-                                    $('section.section-hero').addClass('animation-completed');
-                                });
+                $h2.text('Budeme se brát!').fadeIn(500, function () {
+                    setTimeout(function () {
+                        $h1.show().animate({ height: "60px" }, 500, function () {
+                            $('.scroll-down').fadeIn(function () {
+                                $('section.section-hero').addClass('animation-completed');
+                                setTimeout(function () {
+                                    homeCarouselMove();
+                                    startHomeCarousel();
+                                }, 1000);
                             });
-                        }, 1000);
-                    });
+                        });
+                    }, 1000);
+                });
             });
         }, 2000);
     });
 
-    $(window).on('DOMMouseScroll mousewheel', function (event) {
-        if (enableScroll) {
-            if ($(window).scrollTop() < window.innerHeight) {
-                //scroll down
-                if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-                    scrollToElement('#couple');
-                    enableScroll = false;
-
-                    setTimeout(function () {
-                        enableScroll = true;
-                    },
-                        1500);
-
-                    //prevent page fom scrolling
-                    event.preventDefault();
-                    return false;
-                } else {
-                    scrollToElement('#hero');
-
-                    //prevent page fom scrolling
-                    event.preventDefault();
-                    return false;
-                }
-            }
-        } else {
+    $('#hero').on('DOMMouseScroll mousewheel', function (event) {
+        //scroll down
+        if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
+            scrollToElement('#couple');
             event.preventDefault();
             return false;
         }
-
     });
-
-    $("img.lazy").unveil(400);
 
     function f() {
         c.data("waypoint").context.refresh(), e.each(function (b, c) {
@@ -86,11 +89,21 @@
         a <= window.innerHeight ? b.css("max-height", a).css("overflow", "hidden") : b.css("max-height", window.innerHeight).css("overflow", "auto");
     }
 
+    var waypointFirstHandler = true;
     function j() {
         var a = new Waypoint({
             element: c.get(0),
             handler: function (a) {
-                "up" === a ? c.removeClass("nav-fixed") : c.addClass("nav-fixed");
+                if ("up" === a) {
+                    c.removeClass("nav-fixed");
+                    scrollToElement('#hero');
+                } else {
+                    if (waypointFirstHandler) {
+                        waypointFirstHandler = false;
+                    } else {
+                        c.addClass("nav-fixed");
+                    }
+                }
             }
         });
         c.data("waypoint", a);
@@ -109,10 +122,10 @@
         var g = (b.hasClass("admin-bar") ? 32 : 0) + (b.hasClass("nav-vertical") ? 0 : 48);
         0 !== elementSelector.indexOf("#") || b.hasClass("scrolling") || b.addClass("scrolling").add("html").animate({
             scrollTop: a(elementSelector).offset().top - g + 1
-        }, 400, function () {
+        }, 1000, function () {
             b.removeClass("scrolling"), e.parents("nav").length > 0 && c.removeClass("opened").find(".menu-wrapper").animate({
                 scrollTop: 0
-            }, 400);
+            }, 1000);
         });
     }
 
@@ -372,13 +385,9 @@
     }
     var b = a("body"),
         c = a("nav"),
-        d = a(".preloader"),
         e = a("section");
     window.onload = function () {
-        g(), h(), j(), k(), l(), n(), o(), p(), q(), r(), s(), d.addClass("done"), setTimeout(function () {
-            d.remove();
-            enableScroll = true;
-        }, 500);
+        g(), h(), j(), k(), l(), n(), o(), p(), q(), r(), s(), a('body').removeClass('preload');
     }, a(window).on("resize orientationchange", function () {
         f();
     }), a.fn.extend({
