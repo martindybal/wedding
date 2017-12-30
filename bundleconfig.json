@@ -1,8 +1,8 @@
 ﻿[
   {
-    "outputFileName": "output/index.html",
+    "outputFileName": "index.html",
     "inputFiles": [
-      "index.html"
+      "site.html"
     ],
     "minify": {
       "enabled": true,
