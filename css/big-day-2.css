@@ -658,7 +658,7 @@ section {
         z-index: 1
     }
 
-        section.section-hero .home-carousel {
+        /*section.section-hero .home-carousel {
             position: absolute;
             top: 0;
             left: 0;
@@ -680,13 +680,6 @@ section {
                     display: block;
                 }
 
-                /*section.section-hero .home-carousel .item.active img {
-                    max-width: 100%;
-                    max-height: 100vh;
-                    height: auto;
-                }*/
-
-
                 section.section-hero .home-carousel .item.contrast-low {
                     -webkit-filter: opacity(80%);
                     -moz-filter: opacity(80%);
@@ -699,7 +692,7 @@ section {
                     -moz-filter: contrast(80%);
                     -ms-filter: contrast(80%);
                     filter: contrast(80%)
-                }
+                }*/
 
         section.section-hero.animation-completed:after {
             position: absolute;

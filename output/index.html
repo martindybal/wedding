@@ -14,8 +14,8 @@
     <meta name="description" content="Tradičně netradiční veselka Marti a Edi 2. června 2018">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon.ico">
-    <!--<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7CFira+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
 
+    <!--<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7CFira+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
     <link href="output/site.min.css" rel="stylesheet" />-->
 
     <style>
@@ -26,52 +26,210 @@
             overflow: hidden;
         }
 
-            body.preload > *,
+            body.preload > section,
+            body.preload > nav,
+            body.preload > footer,
+            body.preload > div,
             body.preload .announcement-wrapper {
-                display: none;
+                display: none !important;
             }
 
             body.preload section#hero {
-                display: block;
+                display: block !important;
             }
 
-            body.preload section.section-hero .home-carousel .item.active {
-                width: 100vw;
-                height: 100vh;
-                overflow: hidden;
+        section.section-hero .home-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+            section.section-hero .home-carousel .item {
+                display: none;
             }
 
+                section.section-hero .home-carousel .item picture {
+                    width: 100%;
+                    height: 100%;
+                }
 
-            body.preload section.section-hero .home-carousel .item.contrast-low {
-                -webkit-filter: opacity(80%);
-                -moz-filter: opacity(80%);
-                -ms-filter: opacity(80%);
-                filter: opacity(80%);
-            }
+                section.section-hero .home-carousel .item.active {
+                    display: block;
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: hidden;
+                }
 
-            body.preload img {
-                max-width: 100%;
+                section.section-hero .home-carousel .item.contrast-low {
+                    -webkit-filter: opacity(80%);
+                    -moz-filter: opacity(80%);
+                    -ms-filter: opacity(80%);
+                    filter: opacity(80%);
+                }
+
+        @media only screen and (max-aspect-ratio: 1/1) {
+            section.section-hero .home-carousel .item img {
+                width: 100%;
+                min-height: 100%;
             }
+        }
+
+        @media only screen and (min-aspect-ratio: 1/1) {
+            section.section-hero .home-carousel .item img {
+                height: 100%;
+            }
+        }
+
+        section.section-hero .home-carousel .item img {
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
     </style>
 </head>
 
 <body class="preload">
     <section id="hero" class="section-hero">
         <div class="home-carousel">
-            <div class="item active contrast-low">
-                <img src="img/photos/Home_1.jpg" alt="">
+            <div class="item active">
+                <picture>
+                    <source media="(max-aspect-ratio: 1/1)"
+                            srcset="
+                                img/photos_compressed/responsive/Home_3_portrait_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_3_portrait_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_3_portrait_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_3_portrait_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_3_portrait_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_3_portrait_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_3_portrait_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_3_portrait_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_3_portrait_1920.jpg 1920w,
+                                img/photos_compressed/responsive/Home_3_portrait_2160.jpg 2560w"
+                            sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1) and (max-width: 1920px)"
+                            srcset="
+                                img/photos_compressed/responsive/Home_1_landscape_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_1_landscape_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_1_landscape_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_1_landscape_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_1_landscape_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_1_landscape_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_1_landscape_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_1_landscape_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_1_landscape_1920.jpg 1920w"
+                            sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1)"
+                            srcset="
+                                img/photos_compressed/responsive/Home_3_landscape_2560.jpg 2560w,
+                                img/photos_compressed/responsive/Home_3_landscape_3840.jpg 3840w"
+                            sizes="100vw" />
+                    <img src="img/photos_compressed/Home_1_landscape.jpg" alt="" />
+                </picture>
             </div>
             <div class="item">
-                <img class="lazyload lazypreload" data-src="img/photos/Home_2.jpg" alt="">
-            </div>
-            <div class="item contrast">
-                <img class="lazyload lazypreload" data-src="img/photos/Home_3.jpg" alt="">
+                <picture>
+                    <source media="(max-aspect-ratio: 1/1) and (max-width: 768px)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_2_portrait_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_2_portrait_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_2_portrait_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_2_portrait_768.jpg 768w"
+                            data-sizes="100vw" />
+                    <source media="(max-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_4_portrait_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_4_portrait_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_4_portrait_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_4_portrait_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_4_portrait_1920.jpg 1920w"
+                            data-sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1) and (max-width: 1920px)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_2_landscape_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_2_landscape_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_2_landscape_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_2_landscape_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_2_landscape_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_2_landscape_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_2_landscape_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_2_landscape_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_2_landscape_1920.jpg 1920w"
+                            data-sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_4_landscape_2560.jpg 2560w,
+                                img/photos_compressed/responsive/Home_4_landscape_3840.jpg 3840w"
+                            sizes="100vw" />
+                    <img class="lazyload lazypreload" data-src="img/photos_compressed/Home_2_landscape.jpg" alt="">
+                </picture>
             </div>
             <div class="item">
-                <img class="lazyload lazypreload" data-src="img/photos/Home_4.jpg" alt="">
+                <picture>
+                    <source media="(max-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_3_portrait_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_3_portrait_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_3_portrait_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_3_portrait_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_3_portrait_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_3_portrait_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_3_portrait_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_3_portrait_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_3_portrait_1920.jpg 1920w,
+                                img/photos_compressed/responsive/Home_3_portrait_2160.jpg 2560w"
+                            data-sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_3_landscape_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_3_landscape_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_3_landscape_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_3_landscape_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_3_landscape_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_3_landscape_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_3_landscape_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_3_landscape_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_3_landscape_1920.jpg 1920w,
+                                img/photos_compressed/responsive/Home_3_landscape_2560.jpg 2560w,
+                                img/photos_compressed/responsive/Home_3_landscape_3840.jpg 3840w"
+                            data-sizes="100vw" />
+                    <img class="lazyload lazypreload" data-src="img/photos_compressed/Home_3_landscape.jpg" alt="" />
+                </picture>
             </div>
-            <div class="item contrast-low">
-                <img class="lazyload lazypreload" data-src="img/photos/Home_5.jpg" alt="">
+            <div class="item">
+                <picture>
+                    <source media="(max-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_4_portrait_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_4_portrait_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_4_portrait_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_4_portrait_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_4_portrait_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_4_portrait_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_4_portrait_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_4_portrait_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_4_portrait_1920.jpg 1920w,
+                                img/photos_compressed/responsive/Home_4_portrait_2160.jpg 2560w"
+                            data-sizes="100vw" />
+                    <source media="(min-aspect-ratio: 1/1)"
+                            data-srcset="
+                                img/photos_compressed/responsive/Home_4_landscape_320.jpg 320w,
+                                img/photos_compressed/responsive/Home_4_landscape_480.jpg 480w,
+                                img/photos_compressed/responsive/Home_4_landscape_640.jpg 640w,
+                                img/photos_compressed/responsive/Home_4_landscape_768.jpg 768w,
+                                img/photos_compressed/responsive/Home_4_landscape_820.jpg 820w,
+                                img/photos_compressed/responsive/Home_4_landscape_1024.jpg 1024w,
+                                img/photos_compressed/responsive/Home_4_landscape_1280.jpg 1280w,
+                                img/photos_compressed/responsive/Home_4_landscape_1366.jpg 1366w,
+                                img/photos_compressed/responsive/Home_4_landscape_1920.jpg 1920w,
+                                img/photos_compressed/responsive/Home_4_landscape_2560.jpg 2560w,
+                                img/photos_compressed/responsive/Home_4_landscape_3840.jpg 3840w"
+                            data-sizes="100vw" />
+                    <img class="lazyload lazypreload" data-src="img/photos_compressed/Home_4_landscape.jpg" alt="" />
+                </picture>
             </div>
         </div>
         <div class="announcement-wrapper">
