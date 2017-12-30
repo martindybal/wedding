@@ -198,12 +198,12 @@
 
     function o() {
         var html = ' <div class="owl-carousel owl-theme">' +
-            '<div class="item"> <img src="img/photos/carousel_1.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_2.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_3.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_4.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_5.jpg" alt=""> </div>' +
-            '<div class="item"> <img src="img/photos/carousel_6.jpg" alt=""> </div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_1_300.jpg, img/photos_compressed/responsive/carousel_1_450.jpg 1.5x, img/photos_compressed/responsive/carousel_1_600.jpg 2x, img/photos_compressed/responsive/carousel_1_750.jpg 2.5x, img/photos_compressed/responsive/carousel_1_900.jpg 3x" alt=""></div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_2_300.jpg, img/photos_compressed/responsive/carousel_2_450.jpg 1.5x, img/photos_compressed/responsive/carousel_2_600.jpg 2x, img/photos_compressed/responsive/carousel_2_750.jpg 2.5x, img/photos_compressed/responsive/carousel_2_900.jpg 3x" alt=""></div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_3_300.jpg, img/photos_compressed/responsive/carousel_3_450.jpg 1.5x, img/photos_compressed/responsive/carousel_3_600.jpg 2x, img/photos_compressed/responsive/carousel_3_750.jpg 2.5x, img/photos_compressed/responsive/carousel_3_900.jpg 3x" alt=""></div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_4_300.jpg, img/photos_compressed/responsive/carousel_4_450.jpg 1.5x, img/photos_compressed/responsive/carousel_4_600.jpg 2x, img/photos_compressed/responsive/carousel_4_750.jpg 2.5x, img/photos_compressed/responsive/carousel_4_900.jpg 3x" alt=""></div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_5_300.jpg, img/photos_compressed/responsive/carousel_5_450.jpg 1.5x, img/photos_compressed/responsive/carousel_5_600.jpg 2x, img/photos_compressed/responsive/carousel_5_750.jpg 2.5x, img/photos_compressed/responsive/carousel_5_900.jpg 3x" alt=""></div>' +
+            '<div class="item"><img srcset="img/photos_compressed/responsive/carousel_6_300.jpg, img/photos_compressed/responsive/carousel_6_450.jpg 1.5x, img/photos_compressed/responsive/carousel_6_600.jpg 2x, img/photos_compressed/responsive/carousel_6_750.jpg 2.5x, img/photos_compressed/responsive/carousel_6_900.jpg 3x" alt=""></div>' +
             '</div>';
         $('.separator-carousel').html(html);
         var b = a(".separator-carousel .owl-carousel");
