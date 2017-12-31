@@ -642,7 +642,11 @@ section {
         width: 36em;
         max-width: 80%;
         margin: 2em auto 3em;
-        text-align: center
+        text-align: center;
+    }
+
+    section .section-intro.justify {
+        text-align: justify;
     }
 
     section.section-hero {
@@ -1066,7 +1070,8 @@ section {
                 section.section-story ul.timeline > li:nth-child(2n) .desc {
                     padding-left: 0;
                     padding-right: 4em;
-                    padding-right: 6vw
+                    padding-right: 6vw;
+                    text-align: right;
                 }
 
             section.section-story ul.timeline > li + li {

@@ -45,7 +45,7 @@
                                 setTimeout(function () {
                                     homeCarouselMove();
                                     startHomeCarousel();
-                                }, 1000);
+                                }, 3000);
                             });
                         });
                     }, 1000);
