@@ -24,6 +24,7 @@
       "js/vendor/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css",
       "js/vendor/photoswipe/photoswipe.css",
       "js/vendor/photoswipe/default-skin/default-skin.css",
+      "css/dancing-script.css",
       "css/big-day-2.css"
     ],
     "minify": {
