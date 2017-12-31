@@ -294,7 +294,7 @@
     <section id="couple" class="section-couple">
         <div class="flowers"></div>
         <h2>O nás</h2>
-        <div class="section-intro">
+        <div class="section-intro animation-chain" data-animation="fadeIn">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident neque veritatis, alias nostrum nisi rerum
                 enim numquam perferendis maxime inventore commodi suscipit vero earum quam, laborum maiores.
@@ -303,10 +303,13 @@
         <div class="bride-and-groom flex-responsive">
             <div class="bride">
                 <div class="profile-pic animation-chain" data-animation="fadeInLeft">
-                    <img class="lazyload lazypreload"
-                         sizes="(max-width: 991px) 95vw, 40vw"
-                         data-src="img/photos_compressed/couple-bride.jpg"
-                         srcset="
+                    <div>
+                        <picture>
+                            <source media="(max-width: 991px)" sizes="95vw" srcset="img/photos_compressed/couple-bride_portrait.jpg" />
+                            <img class="lazyload lazypreload"
+                                 sizes="40vw"
+                                 src="img/photos_compressed/couple-bride.jpg"
+                                 srcset="
                             img/photos_compressed/responsive/couple-bride_60.jpg 60w,
                             img/photos_compressed/responsive/couple-bride_80.jpg 80w,
                             img/photos_compressed/responsive/couple-bride_100.jpg 100w,
@@ -335,21 +338,28 @@
                             img/photos_compressed/responsive/couple-bride_560.jpg 560w,
                             img/photos_compressed/responsive/couple-bride_580.jpg 580w,
                             img/photos_compressed/responsive/couple-bride_600.jpg 600w"
-                         alt="">
+                                 alt="">
+                        </picture>
+                    </div>
                 </div>
                 <h3>Edita Hudečková</h3>
-                <h4>Ženich o nevěstě</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident neque veritatis, alias nostrum nisi rerum
-                    enim numquam perferendis maxime inventore commodi suscipit vero earum quam, laborum maiores.
-                </p>
+                <div class="animation-chain" data-animation="fadeIn">
+                    <h4>Ženich o nevěstě</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident neque veritatis, alias nostrum nisi rerum
+                        enim numquam perferendis maxime inventore commodi suscipit vero earum quam, laborum maiores.
+                    </p>
+                </div>
             </div>
             <div class="groom">
                 <div class="profile-pic animation-chain" data-animation="fadeInRight">
-                    <img class="lazyload lazypreload"
-                         sizes="(max-width: 991px) 95vw, 40vw"
-                         data-src="img/photos_compressed/couple-groom.jpg"
-                         srcset="
+                    <div>
+                        <picture>
+                            <source media="(max-width: 991px)" sizes="95vw" srcset="img/photos_compressed/couple-groom_portrait.jpg" />
+                            <img class="lazyload lazypreload"
+                                 sizes="40vw"
+                                 data-src="img/photos_compressed/couple-groom.jpg"
+                                 srcset="
                             img/photos_compressed/responsive/couple-groom_60.jpg 60w,
                             img/photos_compressed/responsive/couple-groom_80.jpg 80w,
                             img/photos_compressed/responsive/couple-groom_100.jpg 100w,
@@ -378,15 +388,19 @@
                             img/photos_compressed/responsive/couple-groom_560.jpg 560w,
                             img/photos_compressed/responsive/couple-groom_580.jpg 580w,
                             img/photos_compressed/responsive/couple-groom_600.jpg 600w"
-                         alt="">
+                                 alt="">
+                        </picture>
+                    </div>
                 </div>
                 <h3>Martin Dybal</h3>
-                <h4>Nevěsta o ženichovi</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque suscipit obcaecati odio culpa
-                    sint odit, labore pariatur veniam sequi eveniet vel vitae molestiae tenetur iste neque ducimus ratione
-                    fugit.
-                </p>
+                <div class="animation-chain" data-animation="fadeIn">
+                    <h4>Nevěsta o ženichovi</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque suscipit obcaecati odio culpa
+                        sint odit, labore pariatur veniam sequi eveniet vel vitae molestiae tenetur iste neque ducimus ratione
+                        fugit.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -524,7 +538,7 @@
             </li>
         </ul>
     </section>
-    <div class="counter separator parallax" data-background-image="img/photos/counter_bg.jpg" data-parallax-factor=".8">
+    <div class="counter separator parallax">
         <div class="flowers"></div>
         <span data-after-countdown="Vzali jsme se!">Už jen</span>
         <div class="decor">
@@ -575,7 +589,7 @@
     </section>
 
     <footer>
-        <div class="footer-bg parallax" data-background-image="img/photos/footerE.jpg" data-parallax-factor=".8"></div>
+        <div class="footer-bg parallax"></div>
         <div class="heart">
             <svg viewBox="0 0 38 35">
                 <use class="shape-heart" xlink:href="img/heart.svg#shape-heart"></use>
@@ -589,7 +603,6 @@
         </a>
     </footer>
 
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
@@ -641,39 +654,27 @@
         </div>
     </div>
 
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
-    <!--<script src="js/vendor/jquery-3.1.1.min.js"></script>-->
-    <!--<script src="output/site.min.js" async></script>-->
-    <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="js/vendor/jquery.unveil.js"></script>
-    <script src=js/vendor/PhotoSwipe/photoswipe.min.js></script>
-    <script src=js/vendor/PhotoSwipe/photoswipe-ui-default.min.js></script>
-    <script src="js/photoswipe-init.js"></script>
-    <script src="js/vendor/jquery.waypoints.min.js"></script>
-    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="js/vendor/isotope.pkgd.min.js"></script>
-    <script src="js/vendor/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="js/vendor/countdown.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/main.js"></script>-->
 
-    <noscript id="deferred-styles">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7CFira+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
-        <link href="output/site.min.css" rel="stylesheet" />
-    </noscript>
-    <script>
-        var loadDeferredStyles = function () {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
-        else window.addEventListener('load', loadDeferredStyles);
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7CFira+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
+    <link href="output/site.min.css" rel="stylesheet" />
+
+    <!--<noscript id="deferred-styles">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7CFira+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
+            <link href="output/site.min.css" rel="stylesheet" />
+        </noscript>
+        <script>
+            var loadDeferredStyles = function () {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+            };
+            var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+            if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
+            else window.addEventListener('load', loadDeferredStyles);
+        </script>-->
     <script src="output/site.min.js" async></script>
 </body>
 

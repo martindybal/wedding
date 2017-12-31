@@ -45,7 +45,6 @@
       "js/vendor/isotope.pkgd.min.js",
       "js/vendor/OwlCarousel2-2.2.1/owl.carousel.js",
       "js/vendor/countdown.js",
-      "js/parallax.js",
       "js/main.js"
     ],
     "minify": {

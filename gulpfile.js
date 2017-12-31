@@ -1,6 +1,8 @@
 ﻿var gulp = require('gulp');
 var debug = require('gulp-debug');
 
+var htmlmin = require('gulp-htmlmin');
+
 var browserSync = require('browser-sync').create();
 
 var tinify = require("tinify");
@@ -10,6 +12,12 @@ tinify.key = "ELaNaacpam03s0u0fsbV6xu4ozxVPU-e";
 var responsive = require('gulp-responsive');
 
 var foreach = require('gulp-foreach');
+
+gulp.task('minify-html', function () {
+    return gulp.src('site.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('index.html'));
+});
 
 gulp.task('browser-sync', function () {
     browserSync.init({
