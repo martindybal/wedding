@@ -5040,7 +5040,7 @@ body > footer {
     position: relative;
 }
 
-    body > footer:after {
+    /*body > footer:after {
         position: absolute;
         content: '';
         display: block;
@@ -5052,7 +5052,7 @@ body > footer {
         right: 0;
         border-bottom-color: #fff;
         border-right-color: #fff
-    }
+    }*/
     
         body > footer .heart svg {
             display: block;
