@@ -5229,7 +5229,6 @@ section {
 
                 section.section-couple .bride-and-groom > .bride .profile-pic,
                 section.section-couple .bride-and-groom > .groom .profile-pic {
-                    width: 95%;
                     margin: 25px;
                     overflow: hidden;
                     position: relative
@@ -5243,7 +5242,7 @@ section {
                 }
 
             section.section-couple .bride-and-groom > .bride h3 {
-                margin: 0 15px 0 auto;
+                margin: 0 25px 0 auto;
             }
 
             section.section-couple .bride-and-groom > .groom h3 {
@@ -5259,7 +5258,7 @@ section {
             }
 
             section.section-couple .bride-and-groom > .bride h4 {
-                margin: 0 15px 0 auto;
+                margin: 0 25px 0 auto;
             }
 
             section.section-couple .bride-and-groom > .groom h4 {
@@ -5273,7 +5272,7 @@ section {
             }
 
             section.section-couple .bride-and-groom > .bride p {
-                margin: 0 15px 0 auto;
+                margin: 0 25px 0 auto;
             }
 
             section.section-couple .bride-and-groom > .groom p {

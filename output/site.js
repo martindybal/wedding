@@ -3971,7 +3971,10 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
                     scrollToElement('#hero');
                 } else {
                     if (waypointFirstHandler) {
-                        waypointFirstHandler = false;
+                        if ($(window).scrollTop() > 100) {
+                            waypointFirstHandler = false;
+                            c.addClass("nav-fixed");
+                        }
                     } else {
                         c.addClass("nav-fixed");
                     }
@@ -3987,6 +3990,7 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
             var e = a(this);
             var f = e.attr("href");
             scrollToElement(f);
+            a('nav.opened').removeClass("opened");
         });
     }
 

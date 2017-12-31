@@ -101,7 +101,10 @@
                     scrollToElement('#hero');
                 } else {
                     if (waypointFirstHandler) {
-                        waypointFirstHandler = false;
+                        if ($(window).scrollTop() > 100) {
+                            waypointFirstHandler = false;
+                            c.addClass("nav-fixed");
+                        }
                     } else {
                         c.addClass("nav-fixed");
                     }
@@ -117,6 +120,7 @@
             var e = a(this);
             var f = e.attr("href");
             scrollToElement(f);
+            a('nav.opened').removeClass("opened");
         });
     }
 
