@@ -21,7 +21,14 @@ gulp.task('minify-html', function () {
 
 gulp.task('browser-sync', function () {
     browserSync.init({
-        proxy: "192.168.2.109:8080"
+        proxy: "192.168.2.109:8080",
+        ui: {
+            port: 8081,
+            weinre: {
+                port: 8082,
+                disabled: true
+            }
+        }
     });
     gulp.src('**/*.{html,js,css}')
         .pipe(browserSync.stream());

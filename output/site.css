@@ -4801,7 +4801,6 @@ body > footer {
         filter: contrast(75%); */
         background-position: center center;
         background-size: cover;
-        background-attachment: fixed;
         background-image: url('../img/photos_compressed/footerE.jpg');
         background-repeat: no-repeat;
         z-index: 1
@@ -4886,7 +4885,7 @@ nav + section {
 }
 
 section {
-    margin: 4rem 0;
+    /*margin: 4rem 0;*/
     padding: 2rem 8rem;
     overflow: hidden;
     position: relative
@@ -5450,15 +5449,32 @@ section {
 
 .counter {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background-attachment: fixed;
     filter: opacity(80%);
-    background-image: url('../img/photos_compressed/counter_bg.jpg');
     background-repeat: no-repeat;
 }
 
-    .counter .decor {
-        margin: 0 !important;
+@supports not (-webkit-overflow-scrolling: touch) {
+    .parallax {
+        -ms-background-attachment: fixed;
+        background-attachment: fixed;
     }
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+    .counter {
+        background-image: url('../img/photos_compressed/counter_bg_portrait.jpg');
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+    .counter {
+        background-image: url('../img/photos_compressed/counter_bg_landscape.jpg');
+    }
+}
+
+.counter .decor {
+    margin: 0 !important;
+}
 
 section.section-events ul.event-list {
     margin: 0;
