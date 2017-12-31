@@ -4802,7 +4802,7 @@ body > footer {
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
-        background-image: url('../img/photos/footerE.jpg');
+        background-image: url('../img/photos_compressed/footerE.jpg');
         background-repeat: no-repeat;
         z-index: 1
     }
@@ -5453,7 +5453,7 @@ section {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-attachment: fixed;
     filter: opacity(80%);
-    background-image: url('../img/photos/counter_bg.jpg');
+    background-image: url('../img/photos_compressed/counter_bg.jpg');
     background-repeat: no-repeat;
 }
 
