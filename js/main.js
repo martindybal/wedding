@@ -98,7 +98,7 @@
             handler: function (a) {
                 if ("up" === a) {
                     c.removeClass("nav-fixed");
-                    scrollToElement('#hero');
+                    //scrollToElement('#hero');
                 } else {
                     if (waypointFirstHandler) {
                         if ($(window).scrollTop() > 100) {

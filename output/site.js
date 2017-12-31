@@ -3968,7 +3968,7 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
             handler: function (a) {
                 if ("up" === a) {
                     c.removeClass("nav-fixed");
-                    scrollToElement('#hero');
+                    //scrollToElement('#hero');
                 } else {
                     if (waypointFirstHandler) {
                         if ($(window).scrollTop() > 100) {
