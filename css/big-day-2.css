@@ -483,17 +483,7 @@ body > footer {
         border-bottom-color: #fff;
         border-right-color: #fff
     }
-
-    body > footer .heart {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -o-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%)
-    }
-
+    
         body > footer .heart svg {
             display: block;
             margin: 0 auto;
@@ -734,9 +724,9 @@ section {
                     margin: 0;
                     padding: 0;
                     font-size: 2em;
+                    font-weight: 400;
                     font-size: 6.75vmin;
                     font-family: 'Dancing Script',cursive;
-                    font-weight: 400;
                     text-transform: none;
                     letter-spacing: 0
                 }
