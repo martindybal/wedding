@@ -477,7 +477,7 @@ body > footer {
         width: 0;
         height: 0;
         border: 2em solid transparent;
-        z-index: 2;
+        z-index: -1;
         bottom: 0;
         right: 0;
         border-bottom-color: #fff;
