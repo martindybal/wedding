@@ -759,11 +759,11 @@
         </div>
     </div>
 
-    <link href="output/site.min.css" rel="stylesheet" />
+    <!--<link href="output/site.min.css" rel="stylesheet" />-->
 
-    <!--<noscript id="deferred-styles">
-            <link href="output/site.min.css" rel="stylesheet" />
-        </noscript>
+    <noscript id="deferred-styles">
+        <link href="output/site.min.css" rel="stylesheet" />
+    </noscript>
     <script>
         var loadDeferredStyles = function () {
             var addStylesNode = document.getElementById("deferred-styles");
@@ -776,7 +776,7 @@
             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
         if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
         else window.addEventListener('load', loadDeferredStyles);
-    </script>-->
+    </script>
 
     <script src="output/site.min.js" async></script>
     <script>
