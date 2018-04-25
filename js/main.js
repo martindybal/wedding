@@ -39,12 +39,13 @@
             $h2.fadeOut(1000, function () {
                 $h2.text('Budeme se brát!').fadeIn(500, function () {
                     setTimeout(function () {
-                        $h1.show().animate({ height: "80px" }, 500, function () {
+                        $h1.show().animate({ height: "6.75vmin" }, 500, function () {
                             $('.scroll-down').fadeIn(function () {
                                 $('section.section-hero').addClass('animation-completed');
                                 setTimeout(function () {
                                     homeCarouselMove();
                                     startHomeCarousel();
+                                    $('.scroll-down').click();
                                 }, 3000);
                             });
                         });
