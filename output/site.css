@@ -5686,12 +5686,12 @@ section {
     background-repeat: no-repeat;
 }
 
-@supports not (-webkit-overflow-scrolling: touch) {
+/*@supports not (-webkit-overflow-scrolling: touch) {
     .parallax {
         -ms-background-attachment: fixed;
         background-attachment: fixed;
     }
-}
+}*/
 
 @media only screen and (max-width:991px) {
     .counter {
