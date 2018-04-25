@@ -4010,6 +4010,8 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
 ! function (a) {
     "use strict";
 
+    var firstEndOfHomeCarousel = true;
+
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     };
@@ -4025,14 +4027,18 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
                     activeItem.removeClass('active').removeAttr('style');
                 });
         } else {
-            nextItem = $('.home-carousel .item').first();
-            nextItem.css('height', 0).addClass('active').animate({ height: '100vh' },
-                1000,
-                function () {
-                    nextItem.removeAttr('style');
-                    activeItem.removeClass('active');
-                });
-
+            if (firstEndOfHomeCarousel && $(window).scrollTop() < 100) {
+                $('.scroll-down').click();
+            } else {
+                nextItem = $('.home-carousel .item').first();
+                nextItem.css('height', 0).addClass('active').animate({ height: '100vh' },
+                    1000,
+                    function () {
+                        nextItem.removeAttr('style');
+                        activeItem.removeClass('active');
+                    });
+            }
+                firstEndOfHomeCarousel = false;
         }
     }
 
@@ -4054,7 +4060,6 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
                                 setTimeout(function () {
                                     homeCarouselMove();
                                     startHomeCarousel();
-                                    $('.scroll-down').click();
                                 }, 3000);
                             });
                         });
@@ -4063,7 +4068,7 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
             });
         }, 2000);
     });
-    
+
     $('#hero').on('DOMMouseScroll mousewheel', function (event) {
         //scroll down
         if ($(window).scrollTop() < 100) {
@@ -4375,7 +4380,7 @@ return t=a?function(t){return t&&a(r(t))}:function(t){return t&&r(t)}}function e
             b.parent().children().filter('[data-hide-after-countdown]').hide();
         });
     }
-    
+
     function s() {
         a(".btn-event-rsvp").on("click", function (c) {
             c.preventDefault();
