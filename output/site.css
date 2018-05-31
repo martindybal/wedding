@@ -3764,6 +3764,7 @@
     position: absolute;
     width: auto;
     height: auto;
+    max-width: none;
     top: 0;
     left: 0;
 }
