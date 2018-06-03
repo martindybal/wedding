@@ -1,0 +1,56 @@
+﻿[
+  {
+    "outputFileName": "index.html",
+    "inputFiles": [
+      "site.html"
+    ],
+    "minify": {
+      "enabled": true,
+      "minifyEmbeddedCssCode": true,
+      "minifyEmbeddedJsCode": true,
+      "minifyInlineCssCode": true,
+      "outputMode": "singleLine"
+    }
+  },
+  {
+    "outputFileName": "output/site.css",
+    "inputFiles": [
+      "css/bootstrap.min.css",
+      "fonts/linearicons/web-font/style.css",
+      "fonts/et-line-font/style.css",
+      "fonts/font-awesome-4.7.0/css/font-awesome.min.css",
+      "css/animate.css",
+      "js/vendor/OwlCarousel2-2.2.1/assets/owl.carousel.min.css",
+      "js/vendor/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css",
+      "js/vendor/photoswipe/photoswipe.css",
+      "js/vendor/photoswipe/default-skin/default-skin.css",
+      "css/dancing-script.css",
+      "css/big-day-2.css"
+    ],
+    "minify": {
+      "enabled": true
+    }
+  },
+  {
+    "outputFileName": "output/site.js",
+    "inputFiles": [
+      "js/vendor/ga.js",
+      "js/vendor/jquery-3.1.1.min.js",
+      "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js",
+      "js/vendor/picturefill.min.js",
+      "js/vendor/lazysizes.min.js",
+      "js/vendor/PhotoSwipe/photoswipe.min.js",
+      "js/vendor/PhotoSwipe/photoswipe-ui-default.min.js",
+      "js/photoswipe-init.js",
+      "js/vendor/jquery.waypoints.min.js",
+      "js/vendor/imagesloaded.pkgd.min.js",
+      "js/vendor/isotope.pkgd.min.js",
+      "js/vendor/OwlCarousel2-2.2.1/owl.carousel.js",
+      "js/vendor/countdown.js",
+      "js/main.js"
+    ],
+    "minify": {
+      "enabled": true
+    }
+  }
+]
