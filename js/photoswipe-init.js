@@ -147,7 +147,7 @@
 
             // define options (if needed)
             options = {
-
+                history: false,
                 galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
                 getThumbBoundsFn: function (index) {
